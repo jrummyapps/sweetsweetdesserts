@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.jrummyapps.sweetsweetdesserts"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <application>
+    <activity
+        android:name=".DessertCase"
+        android:excludeFromRecents="true"
+        android:exported="true"
+        android:hardwareAccelerated="true"
+        android:launchMode="singleInstance"
+        android:process=":sweetsweetdesserts"
+        android:screenOrientation="locked"
+        android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+
+        <category android:name="android.intent.category.DEFAULT"/>
+      </intent-filter>
+    </activity>
+    <service
+        android:name=".DessertCaseDream"
+        android:enabled="false"
+        android:exported="true"
+        android:permission="android.permission.BIND_DREAM_SERVICE"
+        android:process=":sweetsweetdesserts">
+      <intent-filter>
+        <action android:name="android.service.dreams.DreamService"/>
+
+        <category android:name="android.intent.category.DEFAULT"/>
+      </intent-filter>
+    </service>
+  </application>
+
+
+</manifest>
